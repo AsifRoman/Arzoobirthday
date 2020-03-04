@@ -1,0 +1,192 @@
+p{
+    width:100%;
+    color: #ffcccc;
+    font-size:25px;
+    top:-15%;
+    font-family:Almendra SC;
+
+}
+body {
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+    background-image: url("frozen2.jpg");
+    
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin:0;
+    padding:0;
+    width:120%;
+}
+h1:hover {
+    background-color: #AA076B;
+    color: red;
+}
+input{
+    display:none;
+}
+img{
+    width:100%;
+    height:100%;
+    border-radius:20px;
+}
+.container{
+    display:flex;
+}
+.cover{
+    width:600px;
+    height:950px;
+    background-size:cover;
+}
+.page-container{
+    width:600px;
+    height:950px;
+    position:relative;
+    perspective:500px;
+}
+.page{
+    width:100%;
+    height:100%;
+    position:absolute ;
+    top:0;
+    left:0;
+    transform-origin:left;
+    transform-style:preserve-3d;
+    transform:rotateY(0deg);
+    transition: .5s;
+    color:white;
+}
+.front, .back {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    border-radius:20px;
+   
+}
+.front{
+background-color: background: #833ab4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+;
+box-shadow:border-box;
+padding:0 13px;
+    
+}
+
+.back{
+    transform:rotateY(180deg);
+    backface-visibility:hidden;
+}
+.next-btn{
+    position:absolute;
+    bottom:13px;
+    right:13px;
+    cursor:pointer;
+}
+.back-btn{
+    position:absolute;
+    bottom:13px;
+    left:13px;
+    cursor:pointer;
+}
+#p1{
+    z-index:3;
+}
+#p2{
+    z-index:2;
+}
+#p3{
+    z-index:1;
+    }
+#c1:checked ~ .page-container #p1{
+    transform:rotateY(180deg);
+    z-index:1;
+}
+#c2:checked ~ .page-container #p2{
+    transform:rotateY(-180deg);
+    z-index:2;
+}
+#c3:checked ~ .page-container #p3{
+    transform:rotateY(-180deg);
+    z-index:3;
+}
+#c4:checked ~ .page-container #p4{
+    transform:rotateY(-180deg);
+    z-index:4;
+}
+.fa-angle-double-left{
+    font-size:30px;
+
+}
+.fa-angle-double-right{
+    font-size:30px;
+}
+.hear{
+    position: absolute;
+    top: -30%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -m-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    z-index:5;
+ }
+
+.hear:before {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+.hear:after {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+@-webkit-keyframes shape {
+  0%{
+  top:5%;
+  }
+}
+@-webkit-keyframes shape{
+    40%{
+        top:50%;
+    }
+}
+@-moz-keyframes shape {
+  0%{
+  top:30%;
+  }
+}
+@-ms-keyframes shape {
+  100%{
+  top:60%;
+  }
+}
+@keyframes shape{
+    50%{
+        top:70%;
+    }
+    70%{
+        top:80%;
+    }
+}
+@keyframes shape {
+  100%{
+  top:100%;
+  }
+}
